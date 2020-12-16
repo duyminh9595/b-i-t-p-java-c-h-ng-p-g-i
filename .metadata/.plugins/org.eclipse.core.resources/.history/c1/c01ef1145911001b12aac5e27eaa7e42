@@ -1,0 +1,18 @@
+package bt34;
+import Math;
+
+public class HinhTron {
+	private double bankinh;
+
+	public double getBankinh() {
+		return bankinh;
+	}
+
+	public void setBankinh(double bankinh) {
+		this.bankinh = bankinh;
+	}
+	public void dienTich()
+	{
+		System.out.println("Dien tich hinh tron la: "+(Math.));
+	}
+}

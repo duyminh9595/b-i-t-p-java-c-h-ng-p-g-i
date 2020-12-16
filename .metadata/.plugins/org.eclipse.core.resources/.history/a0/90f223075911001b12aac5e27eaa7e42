@@ -1,0 +1,14 @@
+package bt34;
+
+public class HinhTron {
+	private double bankinh;
+
+	public double getBankinh() {
+		return bankinh;
+	}
+
+	public void setBankinh(double bankinh) {
+		this.bankinh = bankinh;
+	}
+	
+}
