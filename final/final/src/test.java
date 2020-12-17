@@ -105,6 +105,7 @@ public class test {
 		int count;
 		int mondk;
 		boolean checkdk;
+		boolean checkdktrungmon;
 		while (check) {
 			dk = new BangDangKy();
 			System.out.println("Nhập mã số sv muốn đăng ký: ");
@@ -112,6 +113,7 @@ public class test {
 			mssvdk = sc.nextInt();
 			count = 0;
 			checkdk = false;
+			checkdktrungmon=false;
 			for (BangDangKy dangky : dsDangKy) {
 				if (dangky.getSvdangky().getMasinhvien() == mssvdk) {
 					++count;
@@ -125,12 +127,20 @@ public class test {
 						mondk = sc.nextInt();
 						for (MonHoc mon : dsMonHoc) {
 							if (mon.getMamonhoc() == mondk) {
-								dk.setSvdangky(sinhvien);
-								dk.setMondangky(mon);
-								dk.setThoigiandangky(Calendar.getInstance().getTime());
-								sc.nextLine();
-								dsDangKy.add(dk);
-								checkdk = true;
+								for(BangDangKy dadk: dsDangKy)
+								{
+									if(dadk.getSvdangky()==sinhvien && dadk.getMondangky()==mon)
+										checkdktrungmon=true;
+								}
+								if(checkdktrungmon==false)
+								{
+									dk.setSvdangky(sinhvien);
+									dk.setMondangky(mon);
+									dk.setThoigiandangky(Calendar.getInstance().getTime());
+									sc.nextLine();
+									dsDangKy.add(dk);
+									checkdk = true;
+								}
 							}
 						}
 					}

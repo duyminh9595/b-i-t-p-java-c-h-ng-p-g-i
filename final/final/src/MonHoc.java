@@ -36,7 +36,7 @@ public class MonHoc {
 		return loaimon;
 	}
 	public void setLoaimon(String loaimon) {
-		if(loaimon.equals(("Đại cương")))
+		if(loaimon.equals(("dai cuong")))
 		{
 			this.loaimon="Đại cương";
 		}
